@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+:root {
+    --primary-clr: #FFFFFF80;
+    --btn-clr: #64a19d;
+    --btn-hover-clr: #4b928b;
+
+    --nav-clr: 255 255 255;
+
+    --varela-font: 'Varela Round', sans-serif;
+    --nunito-font: 'Nunito', sans-serif;
+}
+
+
+
+.container {
+    width: 85%;
+    padding-inline: 3rem;
+    margin-inline: auto;
+}
+
+
+nav {
+    width: 100%;
+    font-family: var(--nunito-font);
+    height: 5.5rem;
+
+
+    background-color: transparent;
+    
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+
+    animation: stickyNav linear forwards;
+    animation-timeline: view();
+    animation-range-start: 100vh;
+    animation-range-end: 150vh;
+
+    
+    
+    .container {
+        
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            letter-spacing: 1px;
+            
+            
+            a {
+                color: var(--primary-clr);
+                text-transform: capitalize;
+            }
+
+            .logo {
+                font-size: 1.25rem;
+                padding-block: .5rem;
+                margin-right: 1rem;
+                font-weight: 700;
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+
+                li {
+                    
+                    
+                    a {
+                        padding: 2.07rem 1.5rem;
+                        display: inline-block;
+                        font-size: 1rem;
+
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes stickyNav {
+    100% { background-color: black; }
+}
+
+.btn {
+    padding: 1.25rem 2rem;
+    background-color: var(--btn-clr);
+    font-size: 80%;
+    font-weight: 400;
+    font-family:  var(--varela-font);
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+    border-radius: 6px;
+    display: inline-block;
+    transition: 200ms ease-in-out;
+
+    &:hover {
+        background-color: var(--btn-hover-clr);
+    }
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    min-height: 35rem;
+    padding: 0;
+    position: relative;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 75%, #000 100%), 
+    url(https://startbootstrap.github.io/startbootstrap-grayscale/assets/img/bg-masthead.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        .hero {
+            display: block;
+            text-align: center;
+
+            h1 {
+                font-size: 6.5rem;
+                line-height: 6.5rem;
+                letter-spacing: .8rem;
+                text-transform: uppercase;
+                font-family:  var(--varela-font);
+                background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                margin-inline: auto;
+                font-weight: 400;
+                margin-bottom: 1rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+                text-align: center;
+                font-family: var(--nunito-font);
+                color: var(--primary-clr);
+                font-weight: 500;
+                max-width: 30rem;
+                margin-inline: auto;
+                margin-bottom: 3rem;
+                line-height: 1.2;
+                letter-spacing: 1px;
+            }
+
+            
+        }
+
+    }
+
+
+}
+
+
+.bw {
+    padding-top: 10rem;
+    background: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.9) 75%, rgba(0,0,0,0.8) 100%);
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+
+
+        .row {
+            max-width: 100%;
+            text-align: center;
+            width: 848px;
+            font-family: var(--nunito-font);
+            padding-inline: .75rem;
+
+            h2 {
+                font-size: 1.85rem;
+                color: white;
+                font-weight: 500;
+                letter-spacing: 1px;
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+                color: var(--primary-clr);
+                font-weight: 400;
+                letter-spacing: 1px;
+                line-height: 1.5;
+                margin-bottom: 5rem;
+
+                a {
+                    color: var(--btn-clr);
+                    text-decoration: underline;
+                }
+            }
+
+        }
+        & > img {
+            width: 1224px;
+        }
+
+    }
+}
+
+.projects {
+    padding-block: 10rem;
+    background-color: #f8f9fa;
+
+    .container {
+
+
+        .row {
+            display: flex;
+            margin-bottom: 3rem;
+            
+            .col {
+
+                img {
+                    width: 816px;
+                }
+                
+
+            }
+            .col-text {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                
+                .text {
+                    width: 414px;
+                    /* height: 133px; */
+                    padding-left: 2rem;
+                    border-left: .5rem solid var(--btn-clr);
+                    text-align: center;
+                    font-family: var(--nunito-font);
+
+                    h4 {
+                        font-size: 1.5rem;
+                        color: black;
+                        font-weight: 600;
+                        letter-spacing: 1px;
+                        margin-bottom: .5rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        color: #00000080;
+                        letter-spacing: .8px;
+                    }
+                }
+            }
+            
+        }
+        .row2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            
+
+            .col {
+                max-width: 100%;
+                img {
+                    width: 598px;
+                    vertical-align: middle;
+                }
+            }
+
+            .col-write {
+                background-color: black;
+                height: 100%;
+                padding: 5rem;
+                width: 100%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;align-items: center;
+
+                
+                .black-text {
+                    width: 100%;
+                    font-family: var(--nunito-font);
+                    
+                    
+                    h4 {
+                        color: white;
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        letter-spacing: 1px;
+                        margin-bottom: .5rem;
+                    }
+
+                    p {
+                        color: var(--primary-clr);
+                        font-size: 1rem;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.signup {
+    padding-block: 10rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url(https://startbootstrap.github.io/startbootstrap-grayscale/assets/img/bg-signup.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    
+
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        
+        .col {
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 auto;
+            width: 66.6%;
+            text-align: center;
+            /* margin-inline: auto; */
+            max-width: 100%;
+
+            svg {
+                overflow: visible;
+                color: white;
+                margin-bottom: .5rem;
+                font-size: 2em;
+                height: 1em;
+            }
+            h2 {
+                font-size: 2rem;
+                font-family: var(--nunito-font);
+                color: white;
+                font-weight: 400;
+                margin-bottom: 3rem;
+                letter-spacing: 1px;
+            }
+
+            .input-group {
+                display: flex;
+
+                input {
+                    display: flex;
+                    flex: 1 0 0%;
+                    width: 100%;
+                    max-width: 100%;
+                    padding: 1.25rem 2rem;
+                    font-family: var(--varela-font);
+                    height: auto;
+                    appearance: none;
+                    color: black;
+                    text-transform: uppercase;
+                    font-size: 80%;  
+                    font-weight: 400;  
+                    letter-spacing: .15rem;
+                    border-radius: .5rem;
+                    border: none;
+                    background-color: white;
+                    outline: none;
+                    margin-right: 1.5rem
+                }
+                
+            }
+        }
+    }
+}
+
+.contact {
+    padding-top: 5rem;
+    background: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.9) 75%, rgba(0,0,0,0.8) 100%);
+
+
+    .container {
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            .col {
+                display: flex;
+                flex: 0 0 auto;
+                padding-inline: 1.5rem;
+                /* width: 100%; */
+
+                .card {
+                    padding-block: 1.5rem;
+                    border-bottom: .25rem solid var(--btn-clr);
+                    height: 100%;
+                    background-color: white;
+                    border-radius: .5rem;
+                    width: 100%;
+
+                    .card-body {
+                        padding: 1rem;
+                        text-align: center;
+
+
+                        svg {
+                            overflow: visible;
+                            fill: var(--btn-clr);
+                            margin-bottom: .5rem;
+                            height: 2em;
+                            height: 1em;
+                        }
+
+                        h4 {
+                            font-size: .75rem;
+                            letter-spacing: 2px;
+                            font-family: var(--varela-font);
+                            text-transform: uppercase;
+                            font-weight: 200;
+                        }
+
+                        hr {
+                            margin-block: 1.5rem;
+                            margin-inline: auto;
+                            border-color: var(--btn-clr);
+                            width: 3rem;
+                            border-width: .25rem;
+                            color: inherit;
+                            opacity: 1;
+                            border-top: 1px solid;
+                            border-left: 1px solid;
+                        }
+
+                        p {
+                            font-size: .875rem;
+                            color: #00000080;
+                            letter-spacing: 2px;
+                            font-family: var(--nunito-font);
+                            font-weight: 400;
+                        }
+
+                        a {
+                            color: var(--btn-clr);
+                            text-decoration: underline;
+                            font-family: var(--nunito-font);
+
+                            &:hover {
+                                color: #2e6760;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .social {
+            margin-top: 5rem;
+            text-align: center;
+
+
+            i {
+                font-size: 1.5rem;
+                color: rgba(255, 255, 255, 0.3);
+                margin-inline: 1.5rem;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.1);
+                padding: 1rem;
+
+                &:hover {
+                    color: rgba(255, 255, 255, 0.5);
+                }
+            }
+
+            .facebook {
+                padding-inline: 1.3rem;
+            }
+        }
+    }
+}
+
+footer {
+    padding-block: 5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.8) 90%);
+
+    .container {
+
+        p {
+            color: var(--primary-clr);
+            font-family: var(--nunito-font);
+            text-align: center;
+        }
+    }
+}
